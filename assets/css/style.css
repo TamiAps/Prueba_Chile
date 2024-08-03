@@ -316,6 +316,18 @@ body * {
     .texto1 {
       color: white !important;
     }
+
+    .tippy-box[data-theme~='light'] {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tippy-box[data-theme~='light'] .tippy-arrow {
+      color: #fff;
+  }
+  
     /*Footer*/
     footer {
         background-color: #0dcaf0;

@@ -1,10 +1,10 @@
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
-  
+
     $('#quienesomos').click(function(){
         alert("Somos la mejor empresa de viajes")
     });
-  
+
     $('#destacados').click(function(){
         alert("Comparte en los mejores lugares de Chile")
     });
@@ -38,24 +38,28 @@ $(function () {
     
     $('.titulo4').click(function(){
         $('.texto4').toggle();
-    })
-  })
-  
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    });
+
+    tippy('[data-tippy-content]', {
+        theme: 'light',
+        animation: 'scale',
+    });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         $('html,body').animate({
             'scrollTop': $($(this).attr('href')).offset().top+'px'
         }, 5000);
         
-  
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });
-  });
-  
-  $("#quienesomos").hover(function() {
+});
+
+$("#quienesomos").hover(function() {
     $(this).css('cursor','pointer').attr('title', 'Los mejores viajes estan junto a nosotros');
-  }, function() {
+}, function() {
     $(this).css('cursor','auto');
-  });
+});
